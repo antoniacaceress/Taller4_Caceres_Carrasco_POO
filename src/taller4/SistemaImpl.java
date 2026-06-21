@@ -1,10 +1,15 @@
 package taller4;
 
+import java.util.ArrayList;
+
 public class SistemaImpl implements Sistema {
 
 	private static SistemaImpl instancia;
+	private ArrayList<Carta> coleccion;
 	
-	private SistemaImpl() {}
+	private SistemaImpl() {
+		coleccion = new ArrayList<>();
+	}
 	
 	public static SistemaImpl getInstancia() {
 		if (instancia == null) {
@@ -14,21 +19,18 @@ public class SistemaImpl implements Sistema {
 	}
 
 	@Override
-	public void agregarCarta() {
-		
-		
+	public void agregarCarta(Carta carta) {
+		coleccion.add(carta);
 	}
 
 	@Override
-	public void eliminarCarta() {
-		
-		
+	public void eliminarCarta(Carta carta) {
+		coleccion.remove(carta);	
 	}
 
 	@Override
-	public void modificarCarta() {
-		
-		
+	public void modificarCarta(Carta carta) {
+
 	}
 	
 }
