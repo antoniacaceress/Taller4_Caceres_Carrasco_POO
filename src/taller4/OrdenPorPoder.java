@@ -15,7 +15,7 @@ public class OrdenPorPoder implements StrategyOrden{
 		
 		coleccion.sort(new Comparator<Carta>() {
 			public int compare(Carta carta1, Carta carta2) {
-				return Integer.compare(carta1.getPoder(), carta2.getPoder());
+				return Double.compare(carta1.getPoder(), carta2.getPoder());
 			}
 		});
 		

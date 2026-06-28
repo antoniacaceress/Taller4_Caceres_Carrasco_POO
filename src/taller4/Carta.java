@@ -7,7 +7,7 @@ public abstract class Carta {
 	private String tipo;
 	private String imagen;
 	private StrategyOrden estrategia;
-	private int poder;
+	private double poder;
 
 	public Carta(String nombre, int rareza, String tipo) {
 		super();
@@ -57,17 +57,17 @@ public abstract class Carta {
 		this.estrategia = estrategia;
 	}
 	
-   public int getPoder() {
+   public double getPoder() {
 		return poder;
 	}
 
-	public void setPoder(int poder) {
+	public void setPoder(double poder) {
 		this.poder = poder;
 	}
 	
    @Override
 	public String toString() {
-		return nombre + "| rareza: " + rareza + "| tipo: " + tipo + "| estrategia: " + estrategia + "| poder: " + poder;
+		return nombre + ";" + rareza + ";" + tipo + ";" + estrategia +";" + poder;
 	}
 
    public abstract double aceptar(VisitorCarta visitor);

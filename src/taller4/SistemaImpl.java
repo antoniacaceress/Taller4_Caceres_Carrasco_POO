@@ -25,11 +25,13 @@ public class SistemaImpl implements Sistema {
 	@Override
 	public void agregarCarta(Carta carta) {
 		coleccion.add(carta);
+		TrabajoArchivos.modificadorArchivos(coleccion);
 	}
 
 	@Override
 	public void eliminarCarta(Carta carta) {
 		coleccion.remove(carta);	
+		TrabajoArchivos.modificadorArchivos(coleccion);
 	}
 
 	@Override
@@ -38,24 +40,10 @@ public class SistemaImpl implements Sistema {
 	}
 	
 	public void leerArchivo() {
-		FactoryCarta factory = new FactoryCarta();
-		
-		try {
-			BufferedReader br = new BufferedReader(new FileReader("Sobres.txt"));
-			String linea;
-			
-			while ((linea = br.readLine()) != null) {
-				String[] partes = linea.split(";");
-				Carta carta = factory.crearCarta(partes);
-				coleccion.add(carta);
-			}
-			br.close();
-			
-		} catch (IOException e) {
-			System.out.println("Error al leer el archivo " + e.getMessage());
-		}
-		
+		TrabajoArchivos.lectorArchivos(coleccion);
 	}
+	
+	
 	
 	public void odenarRareza() {
 		StrategyOrden estrategiaElegida = new OrdenPorRareza();

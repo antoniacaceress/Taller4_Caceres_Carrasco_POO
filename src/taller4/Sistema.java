@@ -6,5 +6,8 @@ public interface Sistema {
 	void eliminarCarta(Carta carta);
 	void modificarCarta(Carta carta);
 	void leerArchivo();
+	void odenarRareza();
+	void ordenarPoder();
+	void ordenarNombre();
 	
 }

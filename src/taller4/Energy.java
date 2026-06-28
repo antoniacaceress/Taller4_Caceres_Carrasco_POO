@@ -21,6 +21,12 @@ public class Energy extends Carta{
 	public double aceptar(VisitorCarta visitor) {
 		return visitor.visitar(this);
 	}
+
+	@Override
+	public String toString() {
+		return getNombre() + ";"  + getRareza() + ";" + getTipo() + ";" + elemento;
+	}
+	
 	
 	
 }

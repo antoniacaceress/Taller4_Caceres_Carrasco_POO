@@ -12,11 +12,9 @@ public class Pokemon extends Carta{
 		this.cantEnergias = cantEnergias;
 	}
 
-
 	public int getDaño() {
 		return daño;
 	}
-
 
 	public void setDaño(int daño) {
 		this.daño = daño;
@@ -36,5 +34,12 @@ public class Pokemon extends Carta{
 	public double aceptar(VisitorCarta visitor) {
 		return visitor.visitar(this);
 	}
+
+	@Override
+	public String toString() {
+		return getNombre() + ";"  + getRareza() + ";" + getTipo() + daño + ";" + cantEnergias;
+	}
+	
+	
 	
 }
