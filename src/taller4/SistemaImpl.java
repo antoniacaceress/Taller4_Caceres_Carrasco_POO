@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class SistemaImpl implements Sistema {
 
 	private static SistemaImpl instancia;
-	private ArrayList<Carta> coleccion;
+	private static ArrayList<Carta> coleccion = new ArrayList<>();
+	
 	
 	private SistemaImpl() {
 		coleccion = new ArrayList<>();
@@ -56,24 +57,20 @@ public class SistemaImpl implements Sistema {
 		
 	}
 	
+	public void odenarRareza() {
+		StrategyOrden estrategiaElegida = new OrdenPorRareza();
+		estrategiaElegida.ordenar(coleccion);
+	}
 	
+	public void ordenarPoder() {
+		StrategyOrden estrategiaElegida = new OrdenPorPoder();
+		estrategiaElegida.ordenar(coleccion);
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void ordenarNombre() {
+		StrategyOrden estrategiaElegida = new OrdenPorNombre();
+		estrategiaElegida.ordenar(coleccion);
+	}
 	
 	
 }

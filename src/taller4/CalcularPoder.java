@@ -1,6 +1,6 @@
 package taller4;
 
-public class calcularPoder implements VisitorCarta {
+public class CalcularPoder implements VisitorCarta {
 
 	@Override
 	public double visitar(Pokemon pokemon) {

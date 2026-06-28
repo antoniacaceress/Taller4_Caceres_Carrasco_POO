@@ -6,7 +6,9 @@ public abstract class Carta {
 	private int rareza;
 	private String tipo;
 	private String imagen;
-	
+	private StrategyOrden estrategia;
+	private int poder;
+
 	public Carta(String nombre, int rareza, String tipo) {
 		super();
 		this.nombre = nombre;
@@ -47,6 +49,27 @@ public abstract class Carta {
 		this.imagen = imagen;
 	}
 	
+   public StrategyOrden getEstrategia() {
+		return estrategia;
+	}
+
+	public void setEstrategia(StrategyOrden estrategia) {
+		this.estrategia = estrategia;
+	}
+	
+   public int getPoder() {
+		return poder;
+	}
+
+	public void setPoder(int poder) {
+		this.poder = poder;
+	}
+	
+   @Override
+	public String toString() {
+		return nombre + "| rareza: " + rareza + "| tipo: " + tipo + "| estrategia: " + estrategia + "| poder: " + poder;
+	}
+
    public abstract double aceptar(VisitorCarta visitor);
 	
 	
