@@ -27,6 +27,4 @@ public class Energy extends Carta{
 		return getNombre() + ";"  + getRareza() + ";" + getTipo() + ";" + elemento;
 	}
 	
-	
-	
 }

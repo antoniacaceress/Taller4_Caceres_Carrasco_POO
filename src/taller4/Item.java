@@ -26,6 +26,5 @@ public class Item extends Carta{
 	public String toString() {
 		return getNombre() + ";"  + getRareza() + ";" + getTipo() + ";" + bonificacion;
 	}
-	
-	
+
 }

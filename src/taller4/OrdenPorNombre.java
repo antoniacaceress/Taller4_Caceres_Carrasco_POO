@@ -3,8 +3,17 @@ package taller4;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+/**
+ * Esta clase ordena de manera alfabética todas las cartas
+ * que el usuario tenga guardadas en su colección.
+ * @author AntoniaCaceres
+ */
 public class OrdenPorNombre implements StrategyOrden{
 
+	/**
+	 * Este método ordena las cartas alfabéticamente por su nombre.
+	 * @param coleccion
+	 */
 	@Override
 	public void ordenar(ArrayList<Carta> coleccion) {
 		coleccion.sort(new Comparator<Carta>() {
@@ -14,5 +23,4 @@ public class OrdenPorNombre implements StrategyOrden{
 		});
 		
 	}
-
 }

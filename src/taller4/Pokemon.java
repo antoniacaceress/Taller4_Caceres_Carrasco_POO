@@ -4,7 +4,6 @@ public class Pokemon extends Carta{
 
 	private int daño;
 	private int cantEnergias;
-	private StrategyOrden estrategia;
 
 	public Pokemon(String nombre, int rareza, String tipo, int daño, int cantEnergias) {
 		super(nombre, rareza, tipo);
@@ -37,9 +36,6 @@ public class Pokemon extends Carta{
 
 	@Override
 	public String toString() {
-		return getNombre() + ";"  + getRareza() + ";" + getTipo() + daño + ";" + cantEnergias;
-	}
-	
-	
-	
+		return getNombre() + ";"  + getRareza() + ";" + getTipo() + ";" + daño + ";" + cantEnergias;
+	}	
 }

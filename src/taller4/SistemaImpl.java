@@ -35,14 +35,14 @@ public class SistemaImpl implements Sistema {
 	}
 
 	@Override
-	public void modificarCarta(Carta carta) {
-
+	public void modificarCarta(Carta carta, ModificadorAtributos m) {
+		carta.aceptar(m);
+		TrabajoArchivos.modificadorArchivos(coleccion);
 	}
 	
 	public void leerArchivo() {
 		TrabajoArchivos.lectorArchivos(coleccion);
 	}
-	
 	
 	
 	public void odenarRareza() {

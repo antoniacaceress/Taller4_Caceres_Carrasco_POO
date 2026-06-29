@@ -26,6 +26,5 @@ public class Supporter extends Carta{
 	public String toString() {
 		return getNombre() + ";"  + getRareza() + ";" + getTipo() + ";" + efectosPorTurno;
 	}
-	
-	
+
 }

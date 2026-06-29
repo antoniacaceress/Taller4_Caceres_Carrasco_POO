@@ -7,8 +7,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Esta clase se encarga de trabajar todo lo que se trata
+ * de archivos utilizados en el programa.
+ * @author AntoniaCaceres
+ */
 public class TrabajoArchivos {
 	
+	/**
+	 * Este método se encarga de leer el archivo principal del programa.
+	 * @param lista 
+	 * @return
+	 */
 	public static ArrayList<Carta> lectorArchivos(ArrayList<Carta> lista) {
 		FactoryCarta factory = new FactoryCarta();
 		
@@ -29,6 +39,11 @@ public class TrabajoArchivos {
 		return lista;
 	}
 
+	/**
+	 * Este método se encarga de modificar el archivo de texto
+	 * cada vez que se realiza algún cambio en él.
+	 * @param lista
+	 */
 	public static void modificadorArchivos(ArrayList<Carta> lista) {
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("Sobres.txt"));
@@ -38,7 +53,7 @@ public class TrabajoArchivos {
 			}
 			bw.close();
 		} catch (IOException e) {
-			System.out.println("Error al leer archivo" + e.getMessage());
+			System.out.println("Error al reescribir el archivo" + e.getMessage());
 		}
 	}
 

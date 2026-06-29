@@ -65,6 +65,7 @@ public abstract class Carta {
 		this.poder = poder;
 	}
 	
+	
    @Override
 	public String toString() {
 		return nombre + ";" + rareza + ";" + tipo + ";" + estrategia +";" + poder;

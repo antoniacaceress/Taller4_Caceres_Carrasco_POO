@@ -1,5 +1,9 @@
 package taller4;
-
+/**
+ * Esta clase es la encargada de crear las cartas dependiendo 
+ * del tipo de carta que sea.
+ * @author AntoniaCaceres
+ */
 public class FactoryCarta {
 		
 	public Carta crearCarta(String[] partes) {
