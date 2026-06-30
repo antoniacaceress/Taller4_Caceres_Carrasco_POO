@@ -10,48 +10,39 @@ import javax.swing.JPanel;
 public class Ventana extends JFrame {
 
 	public static void main(String[] args) {
+		SistemaImpl.getInstancia().leerArchivo();
 		new Ventana();
 
 	}
 
 	public Ventana() {
-		setTitle("Ventana");
-		setSize(700,700);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLayout(new BorderLayout());
-		
-		JPanel tituloApp = new JPanel();
-		JLabel titulo = new JLabel("Aplicación Pokemon TCG");
-		JPanel botones = new JPanel();
-		JButton botonAdm = new JButton("Administración");
-		JButton botonColec = new JButton("Ver colección");
-		
-		botonAdm.addActionListener(e -> {
-			abrirVentanaAdm();
-		});
-		
-		botonColec.addActionListener(e -> {
-			abrirVentanaColec();
-		});
-		
-		botones.add(botonAdm);
-		botones.add(botonColec);
-		
-		tituloApp.add(titulo);
-		add(tituloApp, BorderLayout.NORTH);
-		add(botones, BorderLayout.CENTER);
-		setVisible(true);
+		setTitle("Pokemon TCG");
+        setSize(400,300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+
+        JButton adm = new JButton("Administración");
+        JButton coleccion = new JButton("Colección");
+
+        adm.addActionListener(e -> {
+            new PanelAdministracion();
+        });
+
+        coleccion.addActionListener(e -> {
+            new PanelColeccion();
+        });
+
+        panel.add(adm);
+        panel.add(coleccion);
+
+        add(panel);
+
+        setLocationRelativeTo(null);
+        setVisible(true);
+        
 	}
 
-	private void abrirVentanaColec() {
-		
-		
-	}
-
-	private void abrirVentanaAdm() {
-		
-		
-	}
 	
 	
 	
