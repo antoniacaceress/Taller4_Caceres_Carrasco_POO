@@ -21,6 +21,10 @@ public class SistemaImpl implements Sistema {
 		}
 		return instancia;
 	}
+	
+	public ArrayList<Carta> getColeccion() {
+	    return coleccion;
+	}
 
 	@Override
 	public void agregarCarta(Carta carta) {
